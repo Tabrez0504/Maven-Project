@@ -3,6 +3,7 @@ package org.automation.test_scripts;
 import java.io.IOException;
 
 import org.automation.generic_library.BaseTest;
+import org.automation.generic_library.UtilityMethods;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -23,6 +24,8 @@ public class SubcribeTest extends BaseTest{
 		
 		Assert.assertEquals (actRes, expRes, "verify_User_Is_Able_To_Subcribe is Failed...");
 		Reporter.log("verify_User_Is_Able_To_Subcribe is Pass...", true);
+		test.addScreenCaptureFromPath(UtilityMethods.takeScreenshot(driver),"verify_User_Is_Able_To_Subcribe is Pass...");
+
 
 	}
 }

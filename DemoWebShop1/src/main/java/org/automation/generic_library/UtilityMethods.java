@@ -2,6 +2,7 @@ package org.automation.generic_library;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -21,10 +22,16 @@ public class UtilityMethods implements FrameworkConstant {
 		Random r = new Random();
 		return r.nextInt(4000);
 	}
+	
+	public static String getLocaltime()
+	{
+		return LocalDateTime.now().toString().replace(":", "-");
+	}
 
 //	Take screenshot of entire web page
-	public static void takeScreenshot(WebDriver driver,String name)  {
-		String filePath = screenshot_Path+name+".png";
+	public static String takeScreenshot(WebDriver driver)  {
+		
+		String filePath= screenshot_Path + getLocaltime() + ".png";
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		File target=new File(filePath);
@@ -33,6 +40,8 @@ public class UtilityMethods implements FrameworkConstant {
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		return "."+filePath;
 		
 	}
 

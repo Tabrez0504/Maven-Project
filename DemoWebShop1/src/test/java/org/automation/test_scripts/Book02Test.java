@@ -4,9 +4,12 @@ import org.automation.element_repository.BooksPage;
 import org.automation.element_repository.FictionFXPage;
 import org.automation.element_repository.WishlistPage;
 import org.automation.generic_library.BaseTest;
+import org.automation.generic_library.UtilityMethods;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
 
 public class Book02Test extends BaseTest{
 
@@ -17,6 +20,7 @@ public class Book02Test extends BaseTest{
 
 		Assert.assertEquals(driver.getTitle(), "Demo Web Shop. Books", "Books page not displayed"); 
 		Reporter.log("Books Page Displayed", true);
+		test.log(Status.INFO, "Books Page Displayed");
 
 		BooksPage books_Page = new BooksPage (driver);
         String actProductName=books_Page.getFictionFX().getText(); 
@@ -24,6 +28,7 @@ public class Book02Test extends BaseTest{
 
 		Assert.assertEquals(driver.getTitle(), "Demo Web Shop. Fiction EX", "Fiction Ex Product Page not Displayed");
 		Reporter.log("Fiction Ex Product Page Displayed", true);
+		test.log(Status.INFO, "Fiction Ex Product Page Displayed");
 
 		FictionFXPage product_Page = new FictionFXPage(driver);
 		product_Page.getAddToWishlist().click();
@@ -32,6 +37,8 @@ public class Book02Test extends BaseTest{
 
 		Assert.assertEquals(driver.getTitle(), "Demo Web Shop. Wishlist", "Wish List Page not Displayed");
 		Reporter.log("Wish List Page Displayed", true);
+		test.log(Status.INFO, "Wish List Page Displayed");
+
 		
 		driver.navigate().refresh();
 
@@ -44,6 +51,8 @@ public class Book02Test extends BaseTest{
 
 		Assert.assertEquals (actProductName, expProductName, "Fiction Ex Book Is Not Displayed");
 		Reporter.log("Fiction Ex Book Is Displayed", true);
+		test.log(Status.INFO, "Fiction Ex Book Is Displayed");
+
 
 		wishList_Page.getRemoveFromCart().click();
 
@@ -55,6 +64,8 @@ public class Book02Test extends BaseTest{
 		
 		Assert.assertEquals (actRes, expRes, "verify_User_Is_Able_To_Remove_Product_From_Wishlist is Failed...");
 		Reporter.log("verify_User_Is_Able_To_Remove_Product_From_Wishlist is Pass...", true);
+		test.addScreenCaptureFromPath(UtilityMethods.takeScreenshot(driver),"verify_User_Is_Able_To_Remove_Product_From_Wishlist is Pass...");
+
 
 
 

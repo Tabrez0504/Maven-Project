@@ -2,44 +2,53 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Account Page Displayed]]>
-    </line>
-    <line>
-      <![CDATA[verify_User_Is_Able_To_Change_Password is Passed...]]>
+      <![CDATA[verify_User_Is_Able_To_Subcribe is Pass...]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-04-25T09:52:46 IST" name="Default suite" finished-at="2024-04-25T09:52:57 IST" duration-ms="11469">
+  <suite started-at="2024-05-01T21:05:57 IST" name="Default suite" finished-at="2024-05-01T21:06:09 IST" duration-ms="12093">
     <groups>
     </groups>
-    <test started-at="2024-04-25T09:52:46 IST" name="Default test" finished-at="2024-04-25T09:52:57 IST" duration-ms="11469">
-      <class name="org.automation.test_scripts.ChangePassword">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:org.automation.test_scripts.ChangePassword@5fdcaa40]" started-at="2024-04-25T09:52:46 IST" name="launchBrowser" finished-at="2024-04-25T09:52:51 IST" duration-ms="5490" status="PASS">
+    <test started-at="2024-05-01T21:05:57 IST" name="Default test" finished-at="2024-05-01T21:06:09 IST" duration-ms="12093">
+      <class name="org.automation.test_scripts.SubcribeTest">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:05:57 IST" name="generateReport" finished-at="2024-05-01T21:05:57 IST" duration-ms="361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:05:57 IST" name="launchBrowser" finished-at="2024-05-01T21:06:04 IST" duration-ms="7344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="performLogin()[pri:0, instance:org.automation.test_scripts.ChangePassword@5fdcaa40]" started-at="2024-04-25T09:52:51 IST" name="performLogin" finished-at="2024-04-25T09:52:53 IST" duration-ms="2060" status="PASS">
+        <test-method is-config="true" signature="performLogin(java.lang.reflect.Method)[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:06:04 IST" name="performLogin" finished-at="2024-05-01T21:06:07 IST" duration-ms="2327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void org.automation.test_scripts.SubcribeTest.verify_User_Is_Able_To_Subcribe() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method signature="verify_User_Is_Able_To_Change_Password()[pri:0, instance:org.automation.test_scripts.ChangePassword@5fdcaa40]" started-at="2024-04-25T09:52:53 IST" name="verify_User_Is_Able_To_Change_Password" finished-at="2024-04-25T09:52:56 IST" duration-ms="2793" status="PASS">
+        <test-method signature="verify_User_Is_Able_To_Subcribe()[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:06:07 IST" name="verify_User_Is_Able_To_Subcribe" finished-at="2024-05-01T21:06:07 IST" duration-ms="692" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Account Page Displayed]]>
-            </line>
-            <line>
-              <![CDATA[verify_User_Is_Able_To_Change_Password is Passed...]]>
+              <![CDATA[verify_User_Is_Able_To_Subcribe is Pass...]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verify_User_Is_Able_To_Change_Password -->
-        <test-method is-config="true" signature="performLogout()[pri:0, instance:org.automation.test_scripts.ChangePassword@5fdcaa40]" started-at="2024-04-25T09:52:56 IST" name="performLogout" finished-at="2024-04-25T09:52:57 IST" duration-ms="841" status="PASS">
+        </test-method> <!-- verify_User_Is_Able_To_Subcribe -->
+        <test-method is-config="true" signature="performLogout()[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:06:07 IST" name="performLogout" finished-at="2024-05-01T21:06:09 IST" duration-ms="1477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.automation.test_scripts.ChangePassword@5fdcaa40]" started-at="2024-04-25T09:52:57 IST" name="closeBrowser" finished-at="2024-04-25T09:52:57 IST" duration-ms="216" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:06:09 IST" name="closeBrowser" finished-at="2024-05-01T21:06:09 IST" duration-ms="195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- org.automation.test_scripts.ChangePassword -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:org.automation.test_scripts.SubcribeTest@771a660]" started-at="2024-05-01T21:06:09 IST" name="flushReports" finished-at="2024-05-01T21:06:10 IST" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+      </class> <!-- org.automation.test_scripts.SubcribeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

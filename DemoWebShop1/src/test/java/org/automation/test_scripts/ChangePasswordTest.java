@@ -5,9 +5,12 @@ import java.io.IOException;
 
 import org.automation.element_repository.MyAccountPage;
 import org.automation.generic_library.BaseTest;
+import org.automation.generic_library.UtilityMethods;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
 
 public class ChangePasswordTest extends BaseTest{
 	
@@ -18,6 +21,8 @@ public class ChangePasswordTest extends BaseTest{
 		
 		Assert.assertEquals(driver.getTitle(), "Demo Web Shop. Account", "Account page not displayed"); 
 		Reporter.log("Account Page Displayed", true);
+		test.log(Status.INFO, "Account Page Displayed");
+
 		
 		MyAccountPage acc_Page = new MyAccountPage(driver);
 		
@@ -31,6 +36,8 @@ public class ChangePasswordTest extends BaseTest{
 		
 		Assert.assertEquals(acc_Page.getChangePasswordText().getText(), "Password was changed", "verify_User_Is_Able_To_Change_Password is Failed..."); 
 		Reporter.log("verify_User_Is_Able_To_Change_Password is Passed...", true);
+		test.addScreenCaptureFromPath(UtilityMethods.takeScreenshot(driver),"verify_User_Is_Able_To_Change_Password is Passed...");
+
 		
 	}
 
